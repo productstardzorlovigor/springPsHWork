@@ -4,6 +4,7 @@ import homework.model.Distance;
 import homework.model.Gender;
 import homework.model.Result;
 
+import java.time.Duration;
 import java.util.Collection;
 import java.util.Comparator;
 import java.util.List;

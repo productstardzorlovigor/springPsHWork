@@ -21,6 +21,7 @@ public class ResultParser {
         var distance = Distance.of(resultParts[2]);
         var time = parseTime(resultParts[3]);
 
+
         var person = new Person(name, gender);
         return new Result(person, distance, time);
     }
@@ -28,7 +29,7 @@ public class ResultParser {
     private Duration parseTime(String time){
         var timeParts = time.split(":");
 
-        var totalSecond = Integer.valueOf(timeParts[0]) * 60 * Integer.valueOf(timeParts[1]);
+        var totalSecond = Integer.parseInt(timeParts[0]) * 60 + Integer.parseInt(timeParts[1]);
 
         return Duration.ofSeconds(totalSecond);
     }
